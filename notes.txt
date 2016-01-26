@@ -1,0 +1,4 @@
+- simplified chars not present in kanji db
+- svg animations possible way of animating stroke order:
+https://davidwalsh.name/svg-animation
+http://codepen.io/ghepting/pen/xnezB
