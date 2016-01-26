@@ -1,4 +1,9 @@
+[Observations]
 - simplified chars not present in kanji db
+
+[Ideas]
+- tease apart stroke data from svg to produce stroke order diagrams
 - svg animations possible way of animating stroke order:
 https://davidwalsh.name/svg-animation
 http://codepen.io/ghepting/pen/xnezB
+- train neural net on rasterized svgs and/or bitmaps generated from fonts
