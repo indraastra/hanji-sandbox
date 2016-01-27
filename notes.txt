@@ -8,10 +8,17 @@
     http://codepen.io/ghepting/pen/xnezB
 - train neural net on rasterized svgs and/or bitmaps generated from fonts
 - look up character by drawing it out on canvas
-  - line smoothing for prettier strokes
+- line smoothing for prettier strokes
+- lookup by radical
+- worksheet generator
 
 [Todos]
 - Parse SVG into structure containing ordered stroke paths
 - Template to render an svg given some dimensions and a list of paths
 - Character view mode
 - Test mode
+
+[learning tool]
+-- not good for learning the first time
+-- be stricter on shape/direction and less strict on stroke order (or make it more configurable)
+-- flash card
