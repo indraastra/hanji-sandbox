@@ -4,6 +4,14 @@
 [Ideas]
 - tease apart stroke data from svg to produce stroke order diagrams
 - svg animations possible way of animating stroke order:
-https://davidwalsh.name/svg-animation
-http://codepen.io/ghepting/pen/xnezB
+    https://davidwalsh.name/svg-animation
+    http://codepen.io/ghepting/pen/xnezB
 - train neural net on rasterized svgs and/or bitmaps generated from fonts
+- look up character by drawing it out on canvas
+  - line smoothing for prettier strokes
+
+[Todos]
+- Parse SVG into structure containing ordered stroke paths
+- Template to render an svg given some dimensions and a list of paths
+- Character view mode
+- Test mode
