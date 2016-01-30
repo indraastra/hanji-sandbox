@@ -1,0 +1,14 @@
+.hanji-stroke {
+    width: 109px;
+    height: 109px;
+    color: red;
+}
+
+.hanji-stroke g {
+    stroke: red;
+    stroke-width: 2;
+}
+.hanji-stroke-1 g {
+    stroke: blue;
+    stroke-width: 3;
+}

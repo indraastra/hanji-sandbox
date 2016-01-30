@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Browse{% endblock %}
+
+{% from "stroke.svg" import stroke_to_svg with context %}
+
+{% block body_content %}
+    <div class="container">
+        <h1>[ {{ kanji }} ]</h1>
+        {{ original_svg | safe }}
+        {% for stroke in strokes %}
+            {{ stroke_to_svg(loop.index, stroke) | safe }}
+        {% endfor %}
+    </div>
+{% endblock %}
