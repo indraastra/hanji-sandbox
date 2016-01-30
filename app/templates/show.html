@@ -7,8 +7,8 @@
     <div class="container">
         <h1>[ {{ kanji }} ]</h1>
         {{ original_svg | safe }}
-        {% for stroke in strokes %}
-            {{ stroke_to_svg(loop.index, stroke) | safe }}
+        {% for svg in stroke_svgs %}
+            {{ svg | safe }}
         {% endfor %}
     </div>
 {% endblock %}

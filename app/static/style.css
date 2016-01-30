@@ -4,11 +4,12 @@
     color: red;
 }
 
-.hanji-stroke g {
-    stroke: red;
+.hanji-stroke path, .hanji-strokes path {
+    stroke: #ccc;
     stroke-width: 2;
 }
-.hanji-stroke-1 g {
-    stroke: blue;
+
+.hanji-strokes path:last-child {
+    stroke: red;
     stroke-width: 3;
 }

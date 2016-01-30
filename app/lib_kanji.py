@@ -33,8 +33,7 @@ def parse_svg(svg):
 
 @filters.app_template_filter()
 def unparse_svg(svgd):
-    print(svgd)
-    svg = xmltodict.unparse(svgd)
+    svg = xmltodict.unparse(svgd, full_document=False)
     return svg
 
 
@@ -57,7 +56,11 @@ def extract_strokes(svgd):
     def _extract_strokes(svgd):
         for k, v in svgd.items():
             if k == 'path':
-                strokes.append({k: v})
+                if isinstance(v, list):
+                    vs = v
+                    strokes.extend({k: v} for v in vs)
+                else:
+                    strokes.append({k: v})
             elif isinstance(v, xmltodict.OrderedDict):
                 _extract_strokes(v)
             elif isinstance(v, list):
