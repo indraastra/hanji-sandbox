@@ -14,12 +14,6 @@ def index():
     return redirect(url_for('.svg_kanji_raw', kanji='我'))
 
 
-@svg.route('/static/<filename>')
-def svg_static(filename):
-    current_app.logger.info("Loading file {}".format(filename))
-    return send_file(filename)
-
-
 @svg.route('/raw/<kanji>')
 def svg_kanji_raw(kanji):
     filename = libk.path_to_kanji(kanji)
