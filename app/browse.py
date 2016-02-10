@@ -15,8 +15,9 @@ def index():
     return render_template("index.html")
 
 
+@browse.route('/show')
 @browse.route('/show/<kanji>')
-def show_kanji(kanji):
+def show_kanji(kanji='我'):
     data = libk.parse_svg(libk.load_svg(kanji))
     if not data:
         flash("Character [{}] not found.".format(kanji))
@@ -31,3 +32,8 @@ def show_kanji(kanji):
                            original_svg=original_svg,
                            stroke_svgs=stroke_svgs)
 
+@browse.route('/worksheet')
+@browse.route('/worksheet/<int:cell_count>')
+def worksheet(cell_count=25):
+    cell = render_template("svg/gridcell.svg")
+    return render_template("worksheet.html", cell_svg=cell, cell_count=cell_count)

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% import 'svg/common.svg' as common %}
+
+{% block title %}Worksheet{% endblock %}
+
+{% block body_content %}
+    <div class="container">
+        {% for _ in range(cell_count) %}
+            {{ cell_svg | safe }}
+        {% endfor %}
+    </div>
+{% endblock %}

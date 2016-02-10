@@ -1,0 +1,10 @@
+{% extends 'svg/base.svg' %}
+{% set css_class = 'grid-cell' %}
+
+{% import 'svg/common.svg' as common %}
+
+{% block body %}
+
+{{ common.bg_rectangle() }}
+
+{% endblock %}
