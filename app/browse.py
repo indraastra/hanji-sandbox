@@ -21,13 +21,13 @@ def show_kanji(kanji):
     if not data:
         flash("Character [{}] not found.".format(kanji))
         return render_template("show.html", kanji=kanji)
-    original_svg = libk.unparse_svg(data)
     strokes = libk.extract_strokes(data)
-    stroke_svgs = [render_template("strokes.svg", strokes=strokes[:i])
+    original_svg = render_template("svg/character.svg", strokes=strokes)
+    stroke_svgs = [render_template("svg/strokes.svg", strokes=strokes[:i])
                    for i in range(1, len(strokes)+1)]
-    print(stroke_svgs[0])
 
     return render_template("show.html",
                            kanji=kanji,
                            original_svg=original_svg,
                            stroke_svgs=stroke_svgs)
+

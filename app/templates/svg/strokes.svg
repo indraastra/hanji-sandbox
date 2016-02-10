@@ -1,0 +1,13 @@
+{% extends 'svg/base.svg' %}
+{% set css_class = 'hanji-strokes' %}
+
+{% import 'svg/common.svg' as common %}
+
+{% block body %}
+
+{{ common.bg_rectangle() }}
+{% for stroke in strokes %}
+    {{ stroke | unparse_svg | safe }}
+{% endfor %}
+
+{% endblock %}

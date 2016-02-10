@@ -1,0 +1,9 @@
+{% macro bg_rectangle() %}
+<g class="bg-rectangle">
+    <polyline points="0,0  109,109"/>
+    <polyline points="109,0  0,109"/>
+    <polyline points="54,0  54,109"/>
+    <polyline points="0,54  109,54"/>
+    <rect x="0" y="0" height="109" width="109" style="stroke:#555; stroke-width:2;"/>
+</g>
+{% endmacro %}

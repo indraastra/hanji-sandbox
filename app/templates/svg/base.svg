@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 109 109"
+     width="200px"
+     height="200px"
+     class="{{css_class}}">
+    <g style="stroke:#333;stroke-width:4;fill:none;
+              stroke-linecap:bevel;stroke-linejoin:bevel;">
+
+        {% block body %}
+        {% endblock %}
+
+    </g>
+</svg>
